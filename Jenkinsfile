@@ -21,7 +21,7 @@ pipeline{
     }
     post {
         always {
-            junit 'build/reports/**/*.xml'
+            junit "${WORKSPACE}/test-results/*.xml"
         }
     }
 }
