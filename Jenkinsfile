@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage("build"){
             steps{
-                echo 'building ${currentBuild.number}'
+                echo 'building %BUILD_NUMBER%'
                 bat 'mvn clean install'
             }
         }
