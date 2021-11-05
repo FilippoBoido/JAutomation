@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage("build"){
             steps{
-                bat '%BUILD_NUMBER%'
+                bat 'echo Building version: %BUILD_NUMBER%'
                 bat 'mvn clean install'
             }
         }
