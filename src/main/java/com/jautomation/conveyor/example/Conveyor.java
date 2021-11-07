@@ -7,34 +7,9 @@ import java.io.IOException;
 import java.net.UnknownHostException;
 import java.util.ArrayList;
 
-public class Conveyor{
+public class Conveyor extends Actuator{
 
-    private Enums.GeneralStatus status = Enums.GeneralStatus.OP_NO_STATUS;
-
-    ArrayList<Triplet> outputs;
-    String name;
-    int outputPos;
-
-    public Conveyor(String name, ArrayList<Triplet> outputs){
-        this.name = name;
-        this.outputs = outputs;
-
-        for(Triplet output : outputs)
-        {
-            if(output.getValue0().equals(name))
-                break;
-
-            outputPos++;
-        }
-    }
-
-    public void start(){
-        Triplet output =  outputs.get(outputPos).setAt1(true);
-        outputs.set(outputPos,output);
-    }
-
-    public void stop(){
-        Triplet output =  outputs.get(outputPos).setAt1(false);
-        outputs.set(outputPos,output);
+    public Conveyor(String name, ArrayList<Triplet> outputs) {
+        super(name, outputs);
     }
 }

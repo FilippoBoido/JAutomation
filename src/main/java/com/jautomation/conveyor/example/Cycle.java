@@ -43,12 +43,13 @@ public class Cycle {
         Enums.GeneralStatus retVal;
         try {
             for (Triplet output : Outputs) {
+                /*
                 System.out.println("Output: "
                         + output.getValue0() + " Value: "
                         + output.getValue1()
                         + " Starting address: "
                         + output.getValue2());
-
+                */
                 modbusClient.WriteSingleCoil((Integer) output.getValue2(), (Boolean) output.getValue1());
             }
             retVal = OP_SUCCESS;
