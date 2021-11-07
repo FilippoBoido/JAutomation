@@ -1,6 +1,6 @@
-package com.jautomation.conveyor.example;
+package com.jautomation.line.example;
 
-import static com.jautomation.conveyor.example.Main.*;
+import static com.jautomation.line.example.Main.*;
 
 public class MainRunLogic {
 

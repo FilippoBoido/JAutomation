@@ -1,17 +1,11 @@
-package com.jautomation.conveyor.example;
+package com.jautomation.line.example;
 
-import de.re.easymodbus.exceptions.ModbusException;
 import de.re.easymodbus.modbusclient.ModbusClient;
-import org.javatuples.Pair;
 import org.javatuples.Triplet;
 
 import java.io.IOException;
-import java.net.SocketException;
 import java.net.UnknownHostException;
 import java.util.ArrayList;
-
-import static com.jautomation.conveyor.example.Enums.GeneralStatus.OP_FAIL;
-import static com.jautomation.conveyor.example.Enums.GeneralStatus.OP_SUCCESS;
 
 public class Cycle {
     ModbusClient modbusClient;
@@ -52,11 +46,11 @@ public class Cycle {
                 */
                 modbusClient.WriteSingleCoil((Integer) output.getValue2(), (Boolean) output.getValue1());
             }
-            retVal = OP_SUCCESS;
+            retVal = Enums.GeneralStatus.OP_SUCCESS;
         }
         catch (Exception e) {
             e.printStackTrace();
-            retVal = OP_FAIL;
+            retVal = Enums.GeneralStatus.OP_FAIL;
         }
 
         return retVal;
@@ -87,12 +81,12 @@ public class Cycle {
 
                 counter++;
             }
-            retVal = OP_SUCCESS;
+            retVal = Enums.GeneralStatus.OP_SUCCESS;
 
         }
         catch (Exception e) {
             e.printStackTrace();
-            retVal = OP_FAIL;
+            retVal = Enums.GeneralStatus.OP_FAIL;
         }
 
         return retVal;

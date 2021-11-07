@@ -1,4 +1,4 @@
-package com.jautomation.conveyor.example;
+package com.jautomation.line.example;
 
 import org.javatuples.Triplet;
 
@@ -28,6 +28,7 @@ public abstract class Actuator {
         }
 
     }
+
     public void start(){
         Triplet output =  outputs.get(outputPos).setAt1(true);
         outputs.set(outputPos,output);

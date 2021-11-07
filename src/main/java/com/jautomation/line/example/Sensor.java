@@ -1,4 +1,4 @@
-package com.jautomation.conveyor.example;
+package com.jautomation.line.example;
 
 import org.javatuples.Triplet;
 
@@ -32,11 +32,7 @@ public class Sensor {
 
     public boolean isHigh()
     {
-        return (boolean) inputs.get(inputPos).getValue1() == true;
+        return (boolean) inputs.get(inputPos).getValue1();
     }
 
-    public boolean isLow()
-    {
-        return (boolean) inputs.get(inputPos).getValue1() == false;
-    }
 }

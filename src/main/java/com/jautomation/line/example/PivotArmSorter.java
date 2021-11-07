@@ -1,4 +1,4 @@
-package com.jautomation.conveyor.example;
+package com.jautomation.line.example;
 
 import org.javatuples.Triplet;
 

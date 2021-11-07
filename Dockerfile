@@ -6,4 +6,4 @@ COPY target/ /app
 
 WORKDIR /app/classes
 
-CMD java com.jautomation.conveyor.example.Main
+CMD java com.jautomation.line.example.Main
