@@ -1,7 +1,7 @@
 package com.jautomation.conveyor.example;
 
 public class Enums {
-    enum ConveyorStatus {
+    enum GeneralStatus {
         OP_NO_STATUS,
         OP_SUCCESS,
         OP_FAIL,
