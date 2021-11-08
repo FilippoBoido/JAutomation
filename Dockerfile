@@ -1,9 +1,9 @@
-FROM openjdk
+FROM openjdk:8
 
 RUN mkdir /app
 
-COPY target/ /app
 
-WORKDIR /app/classes
+COPY target/JAutomation-1.0-SNAPSHOT-jar-with-dependencies.jar app/app.jar
+WORKDIR /app
 
-CMD java com.jautomation.line.example.Main
+ENTRYPOINT ["java","-jar","app.jar"]

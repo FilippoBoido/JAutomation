@@ -4,7 +4,7 @@ import de.re.easymodbus.modbusclient.ModbusClient;
 
 public class ModbusConnector {
 
-    public static ModbusClient modbusClient = new ModbusClient("127.0.0.1",502);
+    public static ModbusClient modbusClient = new ModbusClient("192.168.2.118",502);
 
     private ModbusConnector(){
 
