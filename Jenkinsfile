@@ -16,7 +16,7 @@ pipeline{
         stage("deploy"){
             steps{
                 echo 'deploying the application to docker'
-                echo '%cd%'
+                bat 'echo %cd%'
                 bat 'docker build -f Dockerfile -t jautomation:1.%BUILD_NUMBER% .'
                 bat 'docker run jautomation:1.%BUILD_NUMBER%'
             }
