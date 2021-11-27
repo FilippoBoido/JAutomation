@@ -4,13 +4,13 @@ pipeline{
         stage("build"){
             steps{
                 bat 'echo Building version: %BUILD_NUMBER%'
-                bat 'mvn clean install'
+                bat 'mvn install'
             }
         }
         stage("test"){
             steps{
                 echo 'testing the application'
-                bat 'mvn clean test'
+                bat 'mvn test'
             }
         }
         stage("deploy"){
