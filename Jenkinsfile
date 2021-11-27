@@ -18,7 +18,7 @@ pipeline{
                 echo 'deploying the application to docker'
                 bat 'echo %cd%'
                 bat 'docker build -f Dockerfile -t jautomation:1.%BUILD_NUMBER% .'
-                bat 'docker run jautomation:1.%BUILD_NUMBER%'
+                bat 'docker run -d jautomation:1.%BUILD_NUMBER%'
             }
         }
     }
